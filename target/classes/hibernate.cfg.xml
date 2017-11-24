@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">ccsu</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+
+
+		<!-- 此处设置为第6步添加的User实体类映射到数据库的配置文件user.hbm.xml -->
+		<mapping resource="com/xudq/test/bean/user.hbm.xml" />
+		<mapping resource="com/xudq/test/bean/Customer.hbm.xml" />
+		<mapping resource="com/xudq/test/bean/Contacts.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
